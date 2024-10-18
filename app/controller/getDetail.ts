@@ -13,7 +13,7 @@ export const getData = () => {
     return returnData;
 }
 
-export const postData = (req) => {
+export const postData = (req: any) => {
     for (const key in req) {
         if (req.hasOwnProperty(key) && dataVal.hasOwnProperty(key)) {
             (dataVal as any)[key] = req[key];
